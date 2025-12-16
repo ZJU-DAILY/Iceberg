@@ -1,0 +1,101 @@
+# Centralized dataset configuration for Iceberg
+# Global data root lives here and per-dataset entries become concise.
+# Consumers should use train_path/test_path (pre-resolved below), or compose them
+# as: <data_path>/<data_pre>/<train_name|test_name>
+
+# 1) Global root for all datasets (mounted in container as /workspace/data)
+data_path: /workspace/data
+
+# 2) Per-dataset entries
+imagenet1k_dinov2:
+  dataset_type: imagenet
+  data_pre: imagenet-1k
+  # Names of the binary files
+  train_name: dinov2-train.bin
+  test_name: dinov2-validation.bin
+  # Resolved paths (data_path/data_pre/train_name|test_name)
+  train_path: /workspace/data/imagenet-1k/dinov2-train.bin
+  test_path: /workspace/data/imagenet-1k/dinov2-validation.bin
+  # Meta
+  prefix: dinov2
+  data_dim: 768
+  k: 100
+  data_num: 1281167
+  query_num: 50000
+
+imagenet1k_eva02:
+  dataset_type: imagenet
+  data_pre: imagenet-1k
+  train_name: eva02-train.bin
+  test_name: eva02-validation.bin
+  train_path: /workspace/data/imagenet-1k/eva02-train.bin
+  test_path: /workspace/data/imagenet-1k/eva02-validation.bin
+  prefix: eva02
+  data_dim: 1024
+  k: 100
+  data_num: 1281167
+  query_num: 50000
+
+imagenet1k_avg:
+  dataset_type: imagenet
+  data_pre: imagenet-1k
+  train_name: convnext-avg-pool-train.bin
+  test_name: convnext-avg-pool-validation.bin
+  train_path: /workspace/data/imagenet-1k/convnext-avg-pool-train.bin
+  test_path: /workspace/data/imagenet-1k/convnext-avg-pool-validation.bin
+  prefix: convnext-avg-pool
+  data_dim: 1536
+  k: 100
+  data_num: 1281167
+  query_num: 50000
+
+glink_ir101:
+  dataset_type: glink
+  data_pre: glink
+  train_name: ir101-train.bin
+  test_name: ir101-validation.bin
+  train_path: /workspace/data/glink/ir101-train.bin
+  test_path: /workspace/data/glink/ir101-validation.bin
+  prefix: ir101
+  data_dim: 512
+  k: 100
+  data_num: 17091649
+  query_num: 20000
+
+glink_vit:
+  dataset_type: glink
+  data_pre: glink
+  train_name: vit-train.bin
+  test_name: vit-validation.bin
+  train_path: /workspace/data/glink/vit-train.bin
+  test_path: /workspace/data/glink/vit-validation.bin
+  prefix: vit
+  data_dim: 512
+  k: 100
+  data_num: 17091649
+  query_num: 20000
+
+commerce:
+  dataset_type: commerce
+  # NOTE: raw files reside under "shopee_v1" in current layout
+  data_pre: shopee_v1
+  train_name: commerce-train.bin
+  test_name: commerce-validation_high.bin
+  train_path: /workspace/data/shopee_v1/commerce-train.bin
+  test_path: /workspace/data/shopee_v1/commerce-validation_high.bin
+  prefix: commerce
+  data_dim: 48
+  k: 100
+  data_num: 99085171
+  query_num: 23893
+
+bookcorpus:
+  dataset_type: book
+  data_pre: book_corpus
+  train_name: stella-train.bin
+  test_name: stella-validation.bin
+  train_path: /workspace/data/book_corpus/stella-train.bin
+  test_path: /workspace/data/book_corpus/stella-validation.bin
+  prefix: book_corpus
+  data_dim: 1024
+  k: 100

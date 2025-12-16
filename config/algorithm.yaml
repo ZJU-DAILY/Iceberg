@@ -1,0 +1,94 @@
+# Algorithm default parameters for Iceberg
+# Keys must match <algorithm> argument of run.py
+
+hnsw:
+  efc: 256
+  M: 32
+  efs: [100, 200, 300, 400, 500, 600, 800, 1000, 1500]
+  type: nn
+
+ipnsw:
+  efc: 256
+  M: 32
+  efs: [100, 200, 300, 400, 450, 500, 600, 800, 1000, 1500, 2000, 3000]
+  type: ip
+
+ipnsw+:
+  efc: 256
+  cos_efConstruction: 100
+  M: 32
+  cos_M: 10
+  cos_efsearch: 1
+  efs: [100, 120, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 800, 1000, 1500]
+  type: ip
+
+napg:
+  efc: 256
+  M: 32
+  norm_range: 100
+  sample_size: 10
+  efs: [100, 200, 300, 400, 500, 600, 800, 1000, 1500]
+  type: ip
+
+mobius:
+  efc: 256
+  M: 32
+  efs: [100, 300, 500, 800, 1000, 1500]
+  type: ip
+
+mag:
+  threshold: 5
+  R_IP: 15
+  L: 60
+  R: 48
+  C: 300
+  M: 48
+  efs: [100, 150, 200, 250, 300, 500, 800, 1000, 1500]
+  type: ip
+
+nsg:
+  knng_L: 100
+  knng_iter: 10
+  knng_S: 15
+  knng_R: 60
+  L: 60
+  R: 48
+  C: 256
+  efs: [100,150,200,250,300,350,400,450,500,550,600,800,1000,1500]
+  type: nn
+
+vamana:
+  L: 60
+  R: 48
+  C: 256
+  alpha: 1.2
+  efs: [100,150,200,250,300,350,400,450,500,550,600,800,1000,1500]
+  type: nn
+
+dblsh:
+  L: 5
+  K_dblsh: 10
+  beta_list: [0.8, 0.9, 0.92, 0.94, 0.96, 0.98]
+  type: nn
+
+fargo:
+  L: 6
+  K_fargo: 12
+  ub: [0,30,60,80,100,130,160,180,200,300,400,500,600,700]
+  type: ip
+
+rabitq:
+  efc: 4096
+  M_from_dim: true  # M will be set to DATA_DIM by scripts if true
+  efs: [1,2,4,5,8,10,20,30,50,60,100,200,300,500]
+  type: nn
+
+ivfpq:
+  nlist: 12000
+  pqm: 48
+  rerank_k: 300
+
+scann:
+  num_leaves: 2000
+  num_leaves_to_search: 1000
+
