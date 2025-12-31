@@ -38,8 +38,8 @@ Access Link: [Iceberg-dataset](https://huggingface.co/datasets/PIIR/Iceberg-data
 | ImageNet-DINOv2  | 1,281,167       | 768  | 50,000     | Image Classification      |  https://image-net.org/index.php |
 | ImageNet-EVA02 | 1,281,167     | 1024 | 50,000      | Image Classification       | https://image-net.org/index.php|
 | ImageNet-ConvNeXt | 1,281,167    | 1536 | 50,000      | Image Classification   |https://image-net.org/index.php |
-| Glink360K-IR101 | 17,091,649   | 512  | 20,000     | Face Recognition       | https://github.com/deepinsight/insightface/tree/master/recognition/partial_fc#glint360k|
-| Glink360K-ViT | 17,091,649   | 512  | 20,000    | Face Recognition     | https://github.com/deepinsight/insightface/tree/master/recognition/partial_fc#glint360k|
+| Glint360K-IR101 | 17,091,649   | 512  | 20,000     | Face Recognition       | https://github.com/deepinsight/insightface/tree/master/recognition/partial_fc#glint360k|
+| Glint360K-ViT | 17,091,649   | 512  | 20,000    | Face Recognition     | https://github.com/deepinsight/insightface/tree/master/recognition/partial_fc#glint360k|
 | BookCorpus  | 9,250,529   | 1024  | 10,000    | Text Retrieval      | https://huggingface.co/datasets/bookcorpus/bookcorpus|
 | Commerce  | 99,085,171     | 48  | 64,111      | Recommendation     |  |
 
@@ -57,7 +57,7 @@ ImageNet is a large-scale dataset containing millions of high-resolution images 
 **End Tasks:**
 - Label Recall@K: It measures how many correct task-specific labels appear in the top-K retrieved results. 
 
-#### D2: Glink360K
+#### D2: Glint360K
 
 Glint360K is a large-scale face dataset created by merging and cleaning multiple public face datasets to significantly expand both the number of identities and facial images.
 
